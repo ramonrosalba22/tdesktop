@@ -451,7 +451,7 @@ jobs:
           -D TDESKTOP_API_TEST=ON ^
           -D DESKTOP_APP_USE_PACKAGED=OFF ^
           -D DESKTOP_APP_DISABLE_CRASH_REPORTS=OFF ^
-          -D DESKTOP_APP_NO_PDB=ON ^
+          -D DESKTOP_APP_NO_PDB=OFF ^
           %TDESKTOP_BUILD_DEFINE% ^
           -DCMAKE_SYSTEM_VERSION=%SDK%
 
@@ -465,7 +465,7 @@ jobs:
         run: |
           cd %REPO_NAME%\out\Debug
           mkdir artifact
-          move Telegram.* artifact/
+          move * artifact/
       - uses: actions/upload-artifact@master
         name: Upload artifact.
         if: env.UPLOAD_ARTIFACT == 'true'
