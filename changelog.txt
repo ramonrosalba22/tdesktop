@@ -1,4 +1,4 @@
-3.1.4 beta (27.09.21)
+3.1.4 beta (27.09.21 )
 
 - Fix crash in network availability init.
 - Fix assertion violation after a NaN-resulting std::round call.
